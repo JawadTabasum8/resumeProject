@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Education>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <h1>Educational Details</h1>
+            <br />
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">InstuteName</th>
+                        <th scope="col">StartDate</th>
+                        <th scope="col">EndDate</th>
+                        <th scope="col">Degree</th>
+                        <th scope="col" colspan="2">Aaction</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <th scope="row">@item.id</th>
+                            <td>@item.InstuteName</td>
+                            <td>@item.StartDate</td>
+                            <td>@item.EndDate</td>
+                            <td>@item.Degree</td>
+                            <td>
+                                <a class="btn btn-primary text-center" asp-action="UpdateEducation" asp-controller="Admin" asp-route-id="@item.id">Update</a>
+                            </td>
+                            <td>
+                                <a class="btn btn-danger text-center" asp-action="DeleteEducation" asp-controller="Admin" asp-route-id="@item.id">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

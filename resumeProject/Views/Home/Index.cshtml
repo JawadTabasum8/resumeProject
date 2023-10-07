@@ -1,0 +1,113 @@
+﻿@model HomeVM
+
+ <!-- Left Column -->
+<div class="w3-third">
+
+    <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+
+          
+            <img src="~/images/mypic.jpg.jpeg" style="width:100%" alt="JD">
+
+
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <div class="w3-display-bottomleft w3-container w3-text-black">
+                <h2>@Model.profile.Name</h2>
+            </div>
+            </div>
+            <br/>
+        <div class="w3-container">
+            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>@Model.profile.Designation</p>
+            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>@Model.profile.Address</p>
+            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>@Model.profile.Email</p>
+            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>@Model.profile.Phone</p>
+            <hr>
+
+            <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+            @foreach (var item in Model.skill)
+            {
+                <p>@item.Name</p>
+                <div class="w3-light-grey w3-round-xlarge w3-small">
+                    <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:@item.Percentage%">@item.Percentage%</div>
+                </div>
+            }
+ 
+            <br>
+
+            <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+           @foreach (var item in Model.language)
+           {
+                <p>@item.Name</p>
+                <div class="w3-light-grey w3-round-xlarge">
+                    <div class="w3-round-xlarge w3-teal" style="height:24px;width:@item.Percentage%"></div>
+                </div>
+            }
+           
+            <br>
+        </div>
+    </div><br>
+
+    <!-- End Left Column -->
+</div>
+
+<!-- Right Column -->
+<div class="w3-twothird">
+
+    <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+        
+        @foreach (var item in Model.experince)
+        {
+            <div class="w3-container">
+                <h5 class="w3-opacity"><b>@item.JobTitle</b></h5>
+                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>@item.StartDate - @item.EndDate</h6>
+                <p>@item.Description</p>
+                <hr>
+            </div>
+        }
+      
+        
+    </div>
+
+    <div class="w3-container w3-card w3-white">
+         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+        @foreach (var item in Model.education)
+        {
+            <div class="w3-container">
+                <h5 class="w3-opacity"><b>@item.InstuteName</b></h5>
+                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>@item.StartDate - @item.EndDate</h6>
+                <p>@item.Degree</p>
+                <hr>
+            </div>
+        }
+        
+       
+    </div>
+                                                    <!--Project-->
+
+    <div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Demo Projects</h2>
+        
+            <div class="w3-container">
+            <h4 class="w3-text-grey w3-padding-16"><i class="fa fa-star-half-o" aria-hidden="true" fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>  Hotel Management System</h4>
+                <video src="~/vedios/fivestar.mp4" controls width="400" height="300"></video>
+            </div>
+        <div class="w3-container">
+            <h4 class="w3-text-grey w3-padding-16"><i class="fa fa-star-half-o" aria-hidden="true" fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>  GYM Management System</h4>
+            <video src="~/vedios/gym.mp4" controls width="400" height="300"></video>
+        </div>
+        <div class="w3-container">
+            <h4 class="w3-text-grey w3-padding-16"><i class="fa fa-star-half-o" aria-hidden="true" fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>  Dynamic Website</h4>
+            <video src="~/vedios/web.mp4" controls width="400" height="300"></video>
+        </div>
+        
+    </div>
+
+
+   
+
+    <!-- End Right Column -->
+</div>

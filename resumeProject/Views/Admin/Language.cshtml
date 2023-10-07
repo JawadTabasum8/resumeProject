@@ -1,0 +1,39 @@
+﻿@model Language
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <form method="post" asp-controller="Admin" asp-action="Language">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <h1>
+                            Add Language
+                        </h1>
+                        <hr />
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <label class="form-label" asp-for="Name"></label>
+                        <input class="form-control" asp-for="Name" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                </div>
+                <br />
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <label class="form-label" asp-for="Percentage"></label>
+                        <input class="form-control" asp-for="Percentage" />
+                        <span asp-validation-for="Percentage" class="text-danger"></span>
+                    </div>
+                </div>
+                <br />
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <input type="submit" value="Add Language" class="btn btn-primary" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

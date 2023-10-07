@@ -1,0 +1,96 @@
+﻿
+@model ProfileVM
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            @* <form method="post" enctype="multipart/form-data" asp-controller="Admin" asp-action="Profile"> *@
+            <form method="post" asp-controller="Admin" asp-action="Profile">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <h1>
+                            Add Profile
+                        </h1>
+                        <hr />
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <label class="form-label" asp-for="Name"></label>
+                        <input class="form-control" asp-for="Name" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                </div>
+                <br />
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <label class="form-label" asp-for="Email"></label>
+                        <input class="form-control" asp-for="Email" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+                <br />
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <label class="form-label" asp-for="Phone"></label>
+                        <input class="form-control" asp-for="Phone" />
+                        <span asp-validation-for="Phone" class="text-danger"></span>
+                    </div>
+                </div>
+                <br />
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <label class="form-label" asp-for="Designation"></label>
+                        <input class="form-control" asp-for="Designation" />
+                        <span asp-validation-for="Designation" class="text-danger"></span>
+                    </div>
+                </div>
+                <br />
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <label class="form-label" asp-for="Address"></label>
+                        <input class="form-control" asp-for="Address" />
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                </div>
+                <br />
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <label class="form-label" asp-for="Image"></label>
+                        <input class="form-control" asp-for="Image" />
+                        <span asp-validation-for="Image" class="text-danger"></span>
+                    </div>
+                </div>
+                <br />
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <label class="form-label" asp-for="Username"></label>
+                        <input class="form-control" asp-for="Username" />
+                        <span asp-validation-for="Username" class="text-danger"></span>
+                    </div>
+                </div>
+                <br />
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <label class="form-label" asp-for="Password"></label>
+                        <input class="form-control" asp-for="Password" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <label class="form-label" asp-for="CPassword"></label>
+                        <input class="form-control" asp-for="CPassword" />
+                        <span asp-validation-for="CPassword" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <br />
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <input type="submit" value="Add Profile" class="btn btn-primary" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

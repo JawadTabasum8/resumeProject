@@ -1,0 +1,44 @@
+﻿@model ProjectsVM
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <form method="post" enctype="multipart/form-data" asp-controller="Admin" asp-action="#">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <h1>
+                             Projects
+                        </h1>
+                        <hr />
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <label class="form-label" asp-for="Name"></label>
+                        <input class="form-control" asp-for="Name" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <br />
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <label class="form-label" asp-for="Vedio"></label>
+                       <img src="~/vedios/@Model.OldVedio" />
+
+                    </div>
+                </div>
+                <br />
+
+
+
+                <br />
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <input type="submit" value="Add Project" class="btn btn-primary" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
